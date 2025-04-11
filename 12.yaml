@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: node-printer
+  namespace: zoyirjon-final  # Specify the namespace
+spec:
+  schedule: "*/2 * * * *"  # Run every 2 minutes
+  jobTemplate:
+    spec:
+      parallelism: 5  # Run 5 jobs in parallel
+      completions: 10  # A total of 10 completions required
+      template:
+        spec:
+          containers:
+          - name: nginx
+            image: nginx  # Use NGINX image
+            command:
+              - sh
+              - -c
+              - "echo $NODE_NAME"  # Echo the node name
+            env:
+              - name: NODE_NAME
+                valueFrom:
+                  fieldRef:
+                    fieldPath: spec.nodeName  # Fetch the node name from the Downward API
+          restartPolicy: OnFailure
+

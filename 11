@@ -1,0 +1,8 @@
+NAME                           DESIRED   CURRENT   READY   AGE
+final-exam-df44f796c           1         1         1       15m
+flask-application-55cbd68f69   2         2         2       62m
+frontend-something-d47fb476d   1         1         1       87s
+nginx-env-57664967f7           0         0         0       43m
+nginx-env-65d484bf55           0         0         0       45m
+nginx-env-c694d448b            1         1         1       43m
+nginx-env-ddbc4c778            0         0         0       48m

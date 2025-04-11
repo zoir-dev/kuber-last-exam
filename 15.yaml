@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2025-04-11T16:16:49Z"
+  generation: 1
+  name: frontend-something
+  namespace: zoyirjon-final
+  resourceVersion: "20484787"
+  uid: 00fe57c1-5328-4d1d-8470-c30b40788df6
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: frontend-zoyirjon.sts404.uz
+    http:
+      paths:
+      - backend:
+          service:
+            name: frontend-something
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}

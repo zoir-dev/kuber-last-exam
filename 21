@@ -1,0 +1,43 @@
+NAMESPACE         NAME                                 ENDPOINTS                                                             AGE
+cert-manager      cert-manager                         10.233.67.113:9402                                                    7d2h
+cert-manager      cert-manager-cainjector              10.233.65.32:9402                                                     7d2h
+cert-manager      cert-manager-webhook                 10.233.66.211:10250,10.233.66.211:9402                                7d2h
+default           application                          <none>                                                                36d
+default           flaskapp                             <none>                                                                42d
+default           flaskapp-clusterip                   <none>                                                                42d
+default           frontend-something                   <none>                                                                54m
+default           golang-app-service                   10.233.65.57:8080,10.233.66.51:8080,10.233.67.225:8080 + 1 more...    31d
+default           golang-service-go                    10.233.65.153:8080,10.233.66.44:8080,10.233.67.197:8080 + 1 more...   17d
+default           kubernetes                           37.27.12.106:6443                                                     53d
+default           my-go-app                            <none>                                                                31d
+default           nginx                                10.233.65.224:80                                                      49d
+default           nginx-external                       <none>                                                                35d
+default           nginx-named-port                     <none>                                                                33d
+default           nginxservice                         <none>                                                                35d
+default           postgres-db                          <none>                                                                36d
+default           prologic-todo                        <none>                                                                45d
+default           prologic-todo-nodeport               <none>                                                                45d
+default           prologic-todo1                       <none>                                                                45d
+default           todo                                 <none>                                                                46d
+default           todo-app                             <none>                                                                46d
+default           todo-deploy                          <none>                                                                45d
+default           todo-deployment                      <none>                                                                46d
+default           todo-nodeport                        <none>                                                                40d
+default           todo-svc                             <none>                                                                40d
+default           todo-xondamir                        <none>                                                                46d
+default           todolist-nodeport                    <none>                                                                45d
+dilmurod-final    final-exam                           10.233.67.67:5000                                                     6m23s
+ibrohim-final     final-exam-service                   10.233.67.253:80                                                      78m
+ingress-nginx     ingress-nginx-controller             65.108.62.223:443,65.21.148.14:443,65.21.184.121:443 + 3 more...      30h
+ingress-nginx     ingress-nginx-controller-admission   65.108.62.223:8443,65.21.148.14:8443,65.21.184.121:8443               30h
+kube-system       coredns                              10.233.64.58:53,10.233.65.1:53,10.233.64.58:53 + 3 more...            53d
+kube-system       metrics-server                       10.233.64.69:10250                                                    37d
+longhorn-system   longhorn-admission-webhook           10.233.65.4:9502,10.233.66.215:9502,10.233.67.241:9502                7d1h
+longhorn-system   longhorn-backend                     10.233.65.4:9500,10.233.66.215:9500,10.233.67.241:9500                7d1h
+longhorn-system   longhorn-conversion-webhook          10.233.65.4:9501,10.233.66.215:9501,10.233.67.241:9501                7d1h
+longhorn-system   longhorn-frontend                    10.233.66.205:8000,10.233.67.90:8000                                  7d1h
+longhorn-system   longhorn-recovery-backend            10.233.65.4:9503,10.233.66.215:9503,10.233.67.241:9503                7d1h
+special           laravel-service                      <none>                                                                46d
+special           reg-ing                              10.233.64.71:80                                                       44d
+zoyirjon-final    final-exam                           10.233.65.175:5000                                                    67m
+zoyirjon-final    frontend-something                   10.233.66.86:80                                                       20m

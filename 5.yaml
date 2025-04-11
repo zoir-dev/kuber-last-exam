@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-env
+  namespace: zoyirjon-final
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-env
+  template:
+    metadata:
+      labels:
+        app: nginx-env
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        command: ["/bin/sh", "-c"]
+        args:
+          - echo "My name is $AUTHOR and this is my $EXAM_TYPE" && sleep 3600;
+        envFrom:
+          - configMapRef:
+              name: config-info
+

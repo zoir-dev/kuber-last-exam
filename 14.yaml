@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJwcm94aW1hX3VhY2FkZW15QGdtYWlsLmNvbSI6eyJ1c2VybmFtZSI6ImRldm9wcyIsInBhc3N3b3JkIjoiZGV2b3BzVGhlQmVzdCIsImF1dGgiOiJaR1YyYjNCek9tUmxkbTl3YzFSb1pVSmxjM1E9In19fQ==
+kind: Secret
+metadata:
+  creationTimestamp: "2025-04-11T15:20:43Z"
+  name: gitlab-registery
+  namespace: zoyirjon-final
+  resourceVersion: "20467482"
+  uid: 2fdb37eb-fe24-46d7-806e-794db500e254
+type: kubernetes.io/dockerconfigjson

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2025-04-11T15:37:53Z"
+  generation: 1
+  name: final-exam
+  namespace: zoyirjon-final
+  resourceVersion: "20472029"
+  uid: d6104c86-671b-46ee-b8b0-80190b193793
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: zoyirjon-final-exam.sts404.uz
+    http:
+      paths:
+      - backend:
+          service:
+            name: final-exam
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}

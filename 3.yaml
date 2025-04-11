@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-echo
+  namespace: zoyirjon-final
+spec:
+  containers:
+  - name: echo
+    image: busybox
+    command: ["sh", "-c", "echo 'The BEST DevOps COURSE!!!'"]
+  restartPolicy: Never
+

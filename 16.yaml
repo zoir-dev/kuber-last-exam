@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: final-exam-host
+  namespace: zoyirjon-final
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-something
+  template:
+    metadata:
+      labels:
+        app: frontend-something
+    spec:
+      containers:
+        - name: frontend-something
+          image: nvrbckdown/something
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: mt-volume
+              mountPath: /mnt  # This is where the volume will be mounted in the container
+      volumes:
+        - name: mt-volume
+          hostPath:
+            path: /mt  # This is the path on the host machine
+            type: Directory  # Ensure that this is a directory (you can specify other types too)
+

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-something-duplicate
+  namespace: zoyirjon-final
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-something-duplicate
+  template:
+    metadata:
+      labels:
+        app: frontend-something-duplicate
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: final-exam
+                operator: Exists
+      containers:
+      - name: frontend-something-duplicate
+        image: nvrbckdown/something
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 10
