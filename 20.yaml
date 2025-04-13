@@ -18,8 +18,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: final-exam
-                operator: Exists
+              - key: final
+                operator: In
+                values:
+                - exam
       containers:
       - name: frontend-something-duplicate
         image: nvrbckdown/something
